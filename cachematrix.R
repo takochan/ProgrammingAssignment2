@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
         }
         #these lines execute if the cache has not been found (i.e. it is executing for the first time)
         data <- x$get()
-        m <- solve(data) %*% data
+        m <- solve(data)
         x$setInverse(m)
         m
 }
